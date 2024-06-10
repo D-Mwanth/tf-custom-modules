@@ -11,8 +11,8 @@ resource "aws_wafv2_web_acl" "this" {
     name     = "AWSManagedRulesCommonRuleSet"
     priority = 0
 
-    action {
-      block {}
+    override_action {
+      count {}
     }
 
     statement {
